@@ -384,6 +384,41 @@
             font-size: 0.9rem;
         }
 
+        .image-placeholder {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            transition: all 0.3s ease;
+        }
+
+        .image-placeholder:hover {
+            border-color: #4285F4;
+            background: linear-gradient(135deg, #f0f7ff 0%, #e3f2fd 100%);
+        }
+
+        .image-placeholder-content {
+            text-align: center;
+            color: #6c757d;
+        }
+
+        .image-placeholder-content h5 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .image-placeholder-content p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
         @media (max-width: 768px) {
             .tabs {
                 flex-direction: column;
@@ -425,84 +460,93 @@
         <!-- Tab 1: Industry + Why Tastewise -->
         <div class="tab-content active">
             <div class="story-step">
-                <h3>🍽️ The Unstoppable Food & Beverage Market</h3>
-                <p>As we know, people won't stop eating or drinking beverages. That's why today the <span class="highlight">Food Market</span> continues to thrive.</p>
+                <h3>The Unstoppable Food & Beverage Market</h3>
+                <p>Consumer demand for food and beverages remains constant, driving unprecedented market growth.</p>
                 <div class="stats-box">
                     <h4>$9.45 Trillion</h4>
                     <p>Market volume in 2025 | CAGR 6.34% (2025-2030)</p>
-                    <small>Source: Statista - Encompassing production, processing, distribution, marketing and consumption</small>
+                    <small>Source: Statista - Production, processing, distribution, marketing and consumption</small>
                 </div>
             </div>
 
             <div class="story-step">
-                <h3>📈 Consumer Preferences Increasing & Changing</h3>
-                <p>Given the high and diverse demands from consumers expecting different varieties, companies produce more products to compete on the shelf and capture market share.</p>
+                <h3>Consumer Preferences: Accelerating & Diversifying</h3>
+                <p>Rising consumer expectations for product variety force brands to compete aggressively for market share, creating operational complexity.</p>
                 
-               <img src="https://raw.githubusercontent.com/karimgammal/Tastewise_Presentation/main/images/screenshot-1-traditional-workflow.png" 
-     alt="Traditional Food Marketing Model" 
-     style="width: 100%; max-width: 800px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 20px auto; display: block;">
+                <div class="image-placeholder">
+                    <div class="image-placeholder-content">
+                        <h5>Traditional Food Marketing Model</h5>
+                        <p>Lengthy consumer research → Focus groups → Product development → Market testing → Launch</p>
+                    </div>
+                </div>
                 
                 <p style="margin-top: 15px; color: #dc3545; font-weight: 600;"><strong>This traditional model is very high friction with low efficiency.</strong></p>
             </div>
 
             <div class="story-step">
-                <h3>⏰ Impact: Lengthy, Costly and Not Precise</h3>
-                <p>The traditional model of product development and marketing validation is not only time-consuming but also expensive, often taking months and requiring multiple vendors, research firms, and extensive resources.</p>
+                <h3>Impact: Lengthy, Costly and Not Precise</h3>
+                <p>Traditional product development and marketing validation requires extensive time, resources, and multiple vendor relationships, creating operational inefficiencies.</p>
                 
-                <div class="screenshot-placeholder">
-                    <p class="title">Insert Screenshot #2: Cost Breakdown Analysis</p>
-                    <p class="description">Traditional model costs: $25B (Gather Data) + $58B (Analyze & Decide) + $60B (Market & Execute) = $143B total</p>
+                <div class="image-placeholder">
+                    <div class="image-placeholder-content">
+                        <h5>Cost Breakdown Analysis</h5>
+                        <p>Market Research: $150K+ | Focus Groups: $75K+ | Development: $500K+ | Testing: $200K+</p>
+                    </div>
                 </div>
             </div>
 
             <div class="story-step">
-                <h3>🚀 Why Tastewise Was Born</h3>
+                <h3>Why Tastewise Was Born</h3>
                 
-                <div class="screenshot-placeholder">
-                    <p class="title">Insert Screenshot #3: Consumer Data Platform with GenAI Workflow</p>
-                    <p class="description">3-step circular workflow: 1) Data & AI moat (6 years long) → 2) Self-serve Productivity Workflows → 3) Marketing Execution & Automation</p>
+                <div class="image-placeholder">
+                    <div class="image-placeholder-content">
+                        <h5>Consumer Data Platform with GenAI Workflow</h5>
+                        <p>Real-time data → AI insights → Instant validation → Optimized launch</p>
+                    </div>
                 </div>
                 
-                <p>Tastewise is the <span class="highlight">only and first platform</span> to help innovative CPG brands predict the success of their product development, marketing, and sales growth with precision <strong>before even launching</strong>.</p>
+                <p>Tastewise is the <span class="highlight">first and only platform</span> enabling CPG brands to predict product development and marketing success with precision <strong>before launch</strong>.</p>
                 
                 <div class="stats-box" style="margin: 25px 0;">
                     <h4>6 Billion+</h4>
                     <p>Data Points Powering Our GenAI Platform</p>
                 </div>
 
-                <div class="screenshot-placeholder">
-                    <p class="title">Insert Screenshot #4: Tastewise Platform Interface</p>
-                    <p class="description">Dashboard showing rising cake ingredients, TasteGPT chat interface, recipe suggestions, and comprehensive food analytics</p>
+                <div class="image-placeholder">
+                    <div class="image-placeholder-content">
+                        <h5>Tastewise Platform Interface</h5>
+                        <p>Dashboard showing real-time consumer insights, trending flavors, and AI recommendations</p>
+                    </div>
                 </div>
 
-                <p>This happens through the breadth and depth of our 6B data points and GenAI platform that provides you with:</p>
+                <p>Our comprehensive GenAI platform delivers:</p>
                 <div class="process-flow">
                     <div class="process-step">
-                        <h4>🔍 Consumer Health Insights</h4>
-                        <p>Latest trends and behaviors</p>
+                        <h4>Consumer Health Insights</h4>
+                        <p>Real-time trend analysis</p>
                     </div>
                     <div class="process-step">
-                        <h4>🎯 Recommended Flavors</h4>
-                        <p>Data-driven flavor predictions</p>
+                        <h4>Flavor Recommendations</h4>
+                        <p>Data-driven predictions</p>
                     </div>
                     <div class="process-step">
-                        <h4>✨ Content Generation</h4>
-                        <p>AI-powered marketing assets</p>
+                        <h4>Content Generation</h4>
+                        <p>AI-powered assets</p>
                     </div>
                     <div class="process-step">
-                        <h4>📋 Marketing Strategy & Launch</h4>
-                        <p>Comprehensive go-to-market plans</p>
+                        <h4>Marketing Strategy & Launch</h4>
+                        <p>Go-to-market optimization</p>
                     </div>
                     <div class="process-step">
-                        <h4>📊 Sales Intelligence</h4>
-                        <p>Performance optimization</p>
+                        <h4>Sales Intelligence</h4>
+                        <p>Performance analytics</p>
                     </div>
                 </div>
             </div>
 
             <div class="story-step">
-                <h3>🤝 Trusted by Industry Leaders</h3>
-                <p>That's why innovative brands trust and partner with Tastewise:</p>
+                <h3>Trusted by Industry Leaders</h3>
+                <p>Leading CPG brands rely on Tastewise for competitive advantage:</p>
                 <div class="client-logos">
                     <div class="client-logo">PepsiCo</div>
                     <div class="client-logo">Campbell's</div>
@@ -522,7 +566,7 @@
         <!-- Tab 2: Bragg Use Case -->
         <div class="tab-content">
             <div class="story-step">
-                <h3>🎯 Bragg's Challenge</h3>
+                <h3>Bragg's Challenge</h3>
                 <p><strong>Goal:</strong> Extend their ACV refresher flavors, but they need insights on consumer health needs and recommended flavors to inform product development and marketing.</p>
                 
                 <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 25px; border-radius: 10px; margin: 20px 0;">
@@ -535,7 +579,7 @@
             </div>
 
             <div class="story-step">
-                <h3>🔄 4 Key Areas Tastewise Helps CPG Brands</h3>
+                <h3>4 Key Areas Tastewise Helps CPG Brands</h3>
                 <div class="process-flow">
                     <div class="process-step">
                         <h4>Pre-Development</h4>
@@ -561,7 +605,7 @@
             </div>
 
             <div class="story-step">
-                <h3>📊 Consumer Health Insights Discovery</h3>
+                <h3>Consumer Health Insights Discovery</h3>
                 <p>Based on our platform data analysis, these are the highest trending consumer health insights across the US:</p>
                 <div class="insights-grid">
                     <div class="insight-tag">Gut Health ↗️ 45% YoY</div>
@@ -582,7 +626,7 @@
             </div>
 
             <div class="story-step">
-                <h3>🍋 AI-Recommended Flavors</h3>
+                <h3>AI-Recommended Flavors</h3>
                 <p>Based on comprehensive data validation and consumer analysis, Tastewise recommends these 5 high-potential flavors:</p>
                 <div class="flavor-recommendations">
                     <h4>Top 5 Data-Driven Flavor Recommendations</h4>
@@ -608,7 +652,7 @@
             </div>
 
             <div class="story-step">
-                <h3>🎨 Content Visualization & Pre-Launch Validation</h3>
+                <h3>Content Visualization & Pre-Launch Validation</h3>
                 <p>Tastewise creates compelling content concepts to visualize your new flavors, then validates them through targeted campaigns:</p>
                 
                 <div style="background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%); padding: 25px; border-radius: 10px; margin: 20px 0;">
@@ -630,7 +674,7 @@
         <!-- Tab 3: Evaluation Process -->
         <div class="tab-content">
             <div class="story-step">
-                <h3>🗺️ Your Journey to Success</h3>
+                <h3>Your Journey to Success</h3>
                 <p>Our proven 8-step evaluation and onboarding process is designed to minimize risk and maximize results. Here's exactly what to expect:</p>
                 
                 <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 25px; border-radius: 10px; margin: 20px 0;">
@@ -700,7 +744,7 @@
             </div>
 
             <div class="story-step">
-                <h3>⏱️ Timeline & Investment Expectations</h3>
+                <h3>Timeline & Investment Expectations</h3>
                 <div class="stats-box">
                     <h4>2-4 Weeks</h4>
                     <p>From Discovery to Platform Launch</p>
@@ -715,7 +759,7 @@
         <!-- Tab 4: 30-60-90 Day Plan -->
         <div class="tab-content">
             <div class="story-step">
-                <h3>🚀 Your 90-Day Success Roadmap</h3>
+                <h3>Your 90-Day Success Roadmap</h3>
                 <p>A structured approach to maximize value and ensure rapid ROI from your Tastewise partnership. Each phase builds on the previous to compound your success.</p>
             </div>
 
@@ -726,10 +770,10 @@
                     <ul>
                         <li>Complete platform onboarding and team training</li>
                         <li>Master core product features and use cases</li>
-                        <li>Conduct comprehensive sales pipeline assessment</li>
-                        <li>Evaluate current AE performance and capabilities</li>
-                        <li>Audit and optimize existing sales collateral</li>
-                        <li>Map detailed sales cycle flow and identify bottlenecks</li>
+                        <li>Conduct comprehensive market intelligence analysis</li>
+                        <li>Evaluate current product portfolio performance</li>
+                        <li>Audit and optimize existing brand positioning</li>
+                        <li>Map detailed product development workflow</li>
                         <li>Establish KPIs, success metrics, and reporting cadence</li>
                         <li>Complete team certifications and competency validation</li>
                     </ul>
@@ -739,14 +783,14 @@
                     <h3>Month 2</h3>
                     <h4>MOTION</h4>
                     <ul>
-                        <li>Launch comprehensive outbound and inbound cadences</li>
-                        <li>Execute "all hands on deck" opportunity generation</li>
-                        <li>Conduct joint sales calls with Tastewise team</li>
-                        <li>Generate and qualify new pipeline opportunities</li>
+                        <li>Launch comprehensive flavor discovery initiatives</li>
+                        <li>Execute "all hands on deck" trend identification</li>
+                        <li>Conduct joint strategy sessions with Tastewise team</li>
+                        <li>Generate and validate new product concepts</li>
                         <li>Implement weekly performance reviews and optimization</li>
-                        <li>Refine messaging and positioning based on market feedback</li>
+                        <li>Refine messaging and positioning based on data insights</li>
                         <li>Establish robust feedback loops and rapid iteration cycles</li>
-                        <li>Scale successful strategies and pause underperforming tactics</li>
+                        <li>Scale successful strategies and pause underperforming concepts</li>
                     </ul>
                 </div>
 
@@ -754,7 +798,7 @@
                     <h3>Month 3</h3>
                     <h4>SCALE</h4>
                     <ul>
-                        <li>Scale proven successful strategies across all channels</li>
+                        <li>Scale proven successful strategies across all product lines</li>
                         <li>Expand platform usage to additional use cases and teams</li>
                         <li>Implement advanced features and automation workflows</li>
                         <li>Drive cross-functional integration (R&D, Marketing, Sales)</li>
@@ -767,23 +811,23 @@
             </div>
 
             <div class="story-step">
-                <h3>📈 Success Metrics & KPIs by Month</h3>
+                <h3>Success Metrics & KPIs by Month</h3>
                 <div class="process-flow">
                     <div class="process-step">
                         <h4>Month 1 KPIs</h4>
                         <p><strong>Learning & Foundation:</strong><br>
                         • Platform adoption rate: >90%<br>
                         • User certification completion: 100%<br>
-                        • Pipeline quality score improvement: +25%<br>
+                        • Market intelligence insights: +25%<br>
                         • Process optimization index: Baseline established</p>
                     </div>
                     <div class="process-step">
                         <h4>Month 2 KPIs</h4>
                         <p><strong>Execution & Growth:</strong><br>
-                        • Outreach response rates: +40%<br>
-                        • Qualified opportunities generated: +60%<br>
-                        • Sales cycle velocity: +30%<br>
-                        • Joint call success rate: >75%</p>
+                        • New concept generation: +40%<br>
+                        • Qualified product opportunities: +60%<br>
+                        • Development cycle velocity: +30%<br>
+                        • Joint session success rate: >75%</p>
                     </div>
                     <div class="process-step">
                         <h4>Month 3 KPIs</h4>
@@ -797,7 +841,7 @@
             </div>
 
             <div class="story-step">
-                <h3>🎯 Expected Business Outcomes</h3>
+                <h3>Expected Business Outcomes</h3>
                 <div class="stats-box">
                     <h4>3-5x Faster</h4>
                     <p>Product Development Cycle Time</p>
