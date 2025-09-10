@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tastewise - The Leading Consumer Data & GenAI Platform for F&B Brands</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #4285F4 0%, #1976D2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .header .logo {
+            width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            display: none; /* Hidden when logo is used */
+        }
+
+        .header p {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            font-weight: 500;
+            color: white;
+        }
+
+        .tabs {
+            display: flex;
+            background: white;
+            border-radius: 15px 15px 0 0;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .tab {
+            flex: 1;
+            background: #f8f9fa;
+            border: none;
+            padding: 20px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            color: #666;
+        }
+
+        .tab.active {
+            background: white;
+            color: #4285F4;
+            box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
+        }
+
+        .tab:hover:not(.active) {
+            background: #e9ecef;
+            color: #333;
+        }
+
+        .tab-content {
+            background: white;
+            border-radius: 0 0 15px 15px;
+            padding: 40px;
+            min-height: 700px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .story-step {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            border-left: 5px solid #4285F4;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .story-step:hover {
+            transform: translateX(10px);
+        }
+
+        .story-step h3 {
+            color: #4285F4;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .story-step p {
+            line-height: 1.7;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .stats-box {
+            background: linear-gradient(135deg, #4285F4 0%, #1976D2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .stats-box h4 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .client-logos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .client-logo {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            font-weight: 700;
+            color: #4285F4;
+            font-size: 1.1rem;
+        }
+
+        .process-flow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .process-step {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover {
+            border-color: #4285F4;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .process-step h4 {
+            color: #4285F4;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .insight-tag {
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-align: center;
+            font-weight: 600;
+            color: #333;
+            transition: transform 0.3s ease;
+        }
+
+        .insight-tag:hover {
+            transform: scale(1.05);
+        }
+
+        .flavor-recommendations {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+
+        .flavor-recommendations h4 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .flavors-list {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .flavor-item {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            color: #333;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .timeline {
+            position: relative;
+            padding: 30px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #4285F4;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 80px;
+        }
+
+        .timeline-item::before {
+            content: attr(data-step);
+            position: absolute;
+            left: 10px;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background: #4285F4;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .timeline-item h4 {
+            color: #4285F4;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #4285F4 0%, #1976D2 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .month-plan {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .month-card {
+            background: linear-gradient(135deg, #4285F4 0%, #1976D2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .month-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .month-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .month-card ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .month-card li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .month-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #84fab0;
+            font-weight: bold;
+        }
+
+        .screenshot-placeholder {
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            padding: 40px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .screenshot-placeholder:hover {
+            border-color: #4285F4;
+            background: #f0f7ff;
+        }
+
+        .screenshot-placeholder p {
+            color: #6c757d;
+            margin: 5px 0;
+        }
+
+        .screenshot-placeholder .title {
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        .screenshot-placeholder .description {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .tabs {
+                flex-direction: column;
+            }
+            
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .header .logo {
+                width: 250px;
+            }
+            
+            .process-flow {
+                grid-template-columns: 1fr;
+            }
+            
+            .insights-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMzAwIDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBmaWxsPSJ3aGl0ZSI+CjxjaXJjbGUgY3g9IjQwIiBjeT0iNDAiIHI9IjMwIi8+CjxyZWN0IHg9IjI4IiB5PSIyOCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjQiLz4KPHJlY3QgeD0iMjgiIHk9IjM4IiB3aWR0aD0iMjQiIGhlaWdodD0iNCIvPgo8cmVjdCB4PSIyOCIgeT0iNDgiIHdpZHRoPSIyNCIgaGVpZ2h0PSI0Ii8+Cjx0ZXh0IHg9IjkwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkludGVyIiBmb250LXNpemU9IjM2IiBmb250LXdlaWdodD0iNzAwIj50YXN0ZXdpc2U8L3RleHQ+CjwvZz4KPC9zdmc+Cg==" alt="Tastewise" class="logo" />
+            <h1>Tastewise</h1>
+            <p>The Leading Consumer Data & GenAI Platform for F&B Brands</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" onclick="showTab(0)">Industry + Why Tastewise</button>
+            <button class="tab" onclick="showTab(1)">Bragg Use Case</button>
+            <button class="tab" onclick="showTab(2)">Evaluation Process</button>
+            <button class="tab" onclick="showTab(3)">30-60-90 Day Plan</button>
+        </div>
+
+        <!-- Tab 1: Industry + Why Tastewise -->
+        <div class="tab-content active">
+            <div class="story-step">
+                <h3>🍽️ The Unstoppable Food & Beverage Market</h3>
+                <p>As we know, people won't stop eating or drinking beverages. That's why today the <span class="highlight">Food Market</span> continues to thrive.</p>
+                <div class="stats-box">
+                    <h4>$9.45 Trillion</h4>
+                    <p>Market volume in 2025 | CAGR 6.34% (2025-2030)</p>
+                    <small>Source: Statista - Encompassing production, processing, distribution, marketing and consumption</small>
+                </div>
+            </div>
+
+            <div class="story-step">
+                <h3>📈 Consumer Preferences Increasing & Changing</h3>
+                <p>Given the high and diverse demands from consumers expecting different varieties, companies produce more products to compete on the shelf and capture market share.</p>
+                
+                <div class="screenshot-placeholder">
+                    <p class="title">Insert Screenshot #1: Traditional Food Marketing Model</p>
+                    <p class="description">High friction workflow diagram showing Gather Data → Analyze & Decide → Market & Execute with pain points highlighted</p>
+                </div>
+                
+                <p style="margin-top: 15px; color: #dc3545; font-weight: 600;"><strong>This traditional model is very high friction with low efficiency.</strong></p>
+            </div>
+
+            <div class="story-step">
+                <h3>⏰ Impact: Lengthy, Costly and Not Precise</h3>
+                <p>The traditional model of product development and marketing validation is not only time-consuming but also expensive, often taking months and requiring multiple vendors, research firms, and extensive resources.</p>
+                
+                <div class="screenshot-placeholder">
+                    <p class="title">Insert Screenshot #2: Cost Breakdown Analysis</p>
+                    <p class="description">Traditional model costs: $25B (Gather Data) + $58B (Analyze & Decide) + $60B (Market & Execute) = $143B total</p>
+                </div>
+            </div>
+
+            <div class="story-step">
+                <h3>🚀 Why Tastewise Was Born</h3>
+                
+                <div class="screenshot-placeholder">
+                    <p class="title">Insert Screenshot #3: Consumer Data Platform with GenAI Workflow</p>
+                    <p class="description">3-step circular workflow: 1) Data & AI moat (6 years long) → 2) Self-serve Productivity Workflows → 3) Marketing Execution & Automation</p>
+                </div>
+                
+                <p>Tastewise is the <span class="highlight">only and first platform</span> to help innovative CPG brands predict the success of their product development, marketing, and sales growth with precision <strong>before even launching</strong>.</p>
+                
+                <div class="stats-box" style="margin: 25px 0;">
+                    <h4>6 Billion+</h4>
+                    <p>Data Points Powering Our GenAI Platform</p>
+                </div>
+
+                <div class="screenshot-placeholder">
+                    <p class="title">Insert Screenshot #4: Tastewise Platform Interface</p>
+                    <p class="description">Dashboard showing rising cake ingredients, TasteGPT chat interface, recipe suggestions, and comprehensive food analytics</p>
+                </div>
+
+                <p>This happens through the breadth and depth of our 6B data points and GenAI platform that provides you with:</p>
+                <div class="process-flow">
+                    <div class="process-step">
+                        <h4>🔍 Consumer Health Insights</h4>
+                        <p>Latest trends and behaviors</p>
+                    </div>
+                    <div class="process-step">
+                        <h4>🎯 Recommended Flavors</h4>
+                        <p>Data-driven flavor predictions</p>
+                    </div>
+                    <div class="process-step">
+                        <h4>✨ Content Generation</h4>
+                        <p>AI-powered marketing assets</p>
+                    </div>
+                    <div class="process-step">
+                        <h4>📋 Marketing Strategy & Launch</h4>
+                        <p>Comprehensive go-to-market plans</p>
+                    </div>
+                    <div class="process-step">
+                        <h4>📊 Sales Intelligence</h4>
+                        <p>Performance optimization</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-step">
+                <h3>🤝 Trusted by Industry Leaders</h3>
+                <p>That's why innovative brands trust and partner with Tastewise:</p>
+                <div class="client-logos">
+                    <div class="client-logo">PepsiCo</div>
+                    <div class="client-logo">Campbell's</div>
+                    <div class="client-logo">Kellogg's</div>
+                    <div class="client-logo">Mars</div>
+                    <div class="client-logo">Del Monte</div>
+                    <div class="client-logo">Kraft Heinz</div>
+                    <div class="client-logo">Nestlé</div>
+                    <div class="client-logo">Chobani</div>
+                    <div class="client-logo">Waitrose</div>
+                    <div class="client-logo">Kroger</div>
+                </div>
+                <a href="#" class="cta-button" onclick="showTab(1)">See How It Works →</a>
+            </div>
+        </div>
+
+        <!-- Tab 2: Bragg Use Case -->
+        <div class="tab-content">
+            <div class="story-step">
+                <h3>🎯 Bragg's Challenge</h3>
+                <p><strong>Goal:</strong> Extend their ACV refresher flavors, but they need insights on consumer health needs and recommended flavors to inform product development and marketing.</p>
+                
+                <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 25px; border-radius: 10px; margin: 20px 0;">
+                    <h4 style="color: #1976D2; margin-bottom: 15px;">Starting Point: Existing Data Analysis</h4>
+                    <p style="margin-bottom: 10px;"><strong>Category:</strong> ACV Refreshers</p>
+                    <p style="margin-bottom: 10px;"><strong>Target Audience:</strong> Health-conscious consumers aged 25-45</p>
+                    <p style="margin-bottom: 10px;"><strong>Cross-Product Opportunities:</strong> Supplements, protein products, wellness drinks</p>
+                    <p><strong>Market Position:</strong> Premium functional beverages space</p>
+                </div>
+            </div>
+
+            <div class="story-step">
+                <h3>🔄 4 Key Areas Tastewise Helps CPG Brands</h3>
+                <div class="process-flow">
+                    <div class="process-step">
+                        <h4>Pre-Development</h4>
+                        <p>Market intelligence → Concept development → Consumer validation</p>
+                        <div style="margin-top: 10px; color: #4285F4; font-weight: 600;">✅ Tastewise</div>
+                    </div>
+                    <div class="process-step">
+                        <h4>Development & Testing</h4>
+                        <p>Prototype development → Sensory testing → Iterative refinement</p>
+                        <div style="margin-top: 10px; color: #28a745; font-weight: 600;">🏢 Bragg</div>
+                    </div>
+                    <div class="process-step">
+                        <h4>Pre-Launch</h4>
+                        <p>Final validation → Content Creation + Marketing strategy</p>
+                        <div style="margin-top: 10px; color: #4285F4; font-weight: 600;">✅ Tastewise</div>
+                    </div>
+                    <div class="process-step">
+                        <h4>Launch & Scale</h4>
+                        <p>Soft launch → Performance monitoring → Optimization → Scale</p>
+                        <div style="margin-top: 10px; color: #4285F4; font-weight: 600;">✅ Tastewise</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-step">
+                <h3>📊 Consumer Health Insights Discovery</h3>
+                <p>Based on our platform data analysis, these are the highest trending consumer health insights across the US:</p>
+                <div class="insights-grid">
+                    <div class="insight-tag">Gut Health ↗️ 45% YoY</div>
+                    <div class="insight-tag">Immune Support ↗️ 38%</div>
+                    <div class="insight-tag">Healthy Refreshers ↗️ 34%</div>
+                    <div class="insight-tag">Spicy Flavors ↗️ 32%</div>
+                    <div class="insight-tag">High Protein ↗️ 29%</div>
+                    <div class="insight-tag">Natural Ingredients ↗️ 41%</div>
+                    <div class="insight-tag">Low Sugar ↗️ 27%</div>
+                    <div class="insight-tag">Weight Management ↗️ 23%</div>
+                    <div class="insight-tag">Anti-Inflammatory ↗️ 36%</div>
+                    <div class="insight-tag">Blood Sugar Support ↗️ 31%</div>
+                </div>
+                
+                <div style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #ffc107;">
+                    <strong>Key Finding:</strong> Gut health and anti-inflammatory benefits show the strongest growth trajectory, aligning perfectly with ACV's natural properties.
+                </div>
+            </div>
+
+            <div class="story-step">
+                <h3>🍋 AI-Recommended Flavors</h3>
+                <p>Based on comprehensive data validation and consumer analysis, Tastewise recommends these 5 high-potential flavors:</p>
+                <div class="flavor-recommendations">
+                    <h4>Top 5 Data-Driven Flavor Recommendations</h4>
+                    <div class="flavors-list">
+                        <div class="flavor-item">🌿 Ginger Turmeric</div>
+                        <div class="flavor-item">🍇 Pomegranate Mint</div>
+                        <div class="flavor-item">🫐 Elderberry Lemon</div>
+                        <div class="flavor-item">🌺 Hibiscus Lime</div>
+                        <div class="flavor-item">🍯 Green Tea Honey</div>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.9); padding: 20px; border-radius: 10px; margin-top: 20px;">
+                        <h5 style="color: #333; margin-bottom: 15px;">Cross-Product Application Potential:</h5>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+                            <div style="background: #4285F4; color: white; padding: 8px 15px; border-radius: 15px; text-align: center; font-size: 0.9rem;">Supplements</div>
+                            <div style="background: #4285F4; color: white; padding: 8px 15px; border-radius: 15px; text-align: center; font-size: 0.9rem;">Protein Products</div>
+                            <div style="background: #4285F4; color: white; padding: 8px 15px; border-radius: 15px; text-align: center; font-size: 0.9rem;">Mocktails</div>
+                            <div style="background: #4285F4; color: white; padding: 8px 15px; border-radius: 15px; text-align: center; font-size: 0.9rem;">Wellness Shots</div>
+                            <div style="background: #4285F4; color: white; padding: 8px 15px; border-radius: 15px; text-align: center; font-size: 0.9rem;">Foot Soaks</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-step">
+                <h3>🎨 Content Visualization & Pre-Launch Validation</h3>
+                <p>Tastewise creates compelling content concepts to visualize your new flavors, then validates them through targeted campaigns:</p>
+                
+                <div style="background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%); padding: 25px; border-radius: 10px; margin: 20px 0;">
+                    <h4 style="color: #2e7d32; margin-bottom: 15px;">🏆 Success Story: Crunch Pak</h4>
+                    <p style="color: #333; margin-bottom: 10px;"><strong>Challenge:</strong> Similar profile company (<500 employees, <$200M revenue) needed new product innovation</p>
+                    <p style="color: #333; margin-bottom: 10px;"><strong>Solution:</strong> Tastewise identified untapped flavor opportunities and market positioning</p>
+                    <p style="color: #2e7d32; font-weight: 600; font-size: 1.1rem;"><strong>Result: $10M in new sales within weeks</strong></p>
+                </div>
+                
+                <div class="stats-box">
+                    <h4>Minutes vs. Months</h4>
+                    <p>Complete validation process in minutes, not months of traditional research</p>
+                </div>
+                
+                <a href="#" class="cta-button" onclick="showTab(2)">Ready to Evaluate? →</a>
+            </div>
+        </div>
+
+        <!-- Tab 3: Evaluation Process -->
+        <div class="tab-content">
+            <div class="story-step">
+                <h3>🗺️ Your Journey to Success</h3>
+                <p>Our proven 8-step evaluation and onboarding process is designed to minimize risk and maximize results. Here's exactly what to expect:</p>
+                
+                <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 25px; border-radius: 10px; margin: 20px 0;">
+                    <h4 style="color: #1976D2; margin-bottom: 15px;">Timeline Overview</h4>
+                    <p style="margin-bottom: 10px;"><strong>Phase 1:</strong> Discovery & Demo (Week 1)</p>
+                    <p style="margin-bottom: 10px;"><strong>Phase 2:</strong> Proposal & Approval (Week 2-3)</p>
+                    <p><strong>Phase 3:</strong> Contract & Onboarding (Week 4)</p>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item" data-step="1">
+                    <h4>Discovery Call ✅ Today</h4>
+                    <p><strong>Duration:</strong> 45-60 minutes<br>
+                    <strong>Participants:</strong> You + Tastewise Solutions Team<br>
+                    <strong>Outcome:</strong> Clear understanding of your challenges, goals, and potential ROI. We'll identify key use cases and demonstrate initial value.</p>
+                </div>
+
+                <div class="timeline-item" data-step="2">
+                    <h4>Custom Use Case Demo</h4>
+                    <p><strong>Duration:</strong> 60-90 minutes<br>
+                    <strong>Participants:</strong> CMO, Head of Product Dev + Tastewise Team<br>
+                    <strong>Outcome:</strong> Live demonstration using your specific category, brand challenges, and competitive landscape. Real data, real insights.</p>
+                </div>
+
+                <div class="timeline-item" data-step="3">
+                    <h4>Strategic Alignment Meeting</h4>
+                    <p><strong>Duration:</strong> 30-45 minutes (if needed)<br>
+                    <strong>Participants:</strong> Key stakeholders<br>
+                    <strong>Outcome:</strong> Align on
