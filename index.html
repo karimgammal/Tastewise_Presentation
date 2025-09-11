@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tastewise - The Leading Consumer Data & GenAI Platform for F&B Brands</title>
+    <title>tastewise - The Leading Consumer Data & GenAI Platform for F&B Brands</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -31,18 +31,12 @@
             color: white;
         }
 
-        .header .logo {
-            width: 300px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
         .header h1 {
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            display: none; /* Hidden when logo is used */
+            text-transform: lowercase;
         }
 
         .header p {
@@ -355,68 +349,17 @@
             font-weight: bold;
         }
 
-        .screenshot-placeholder {
-            background: #f8f9fa;
-            border: 2px dashed #dee2e6;
-            padding: 40px;
+        .img-container {
             text-align: center;
             margin: 20px 0;
-            border-radius: 8px;
-            transition: all 0.3s ease;
         }
 
-        .screenshot-placeholder:hover {
-            border-color: #4285F4;
-            background: #f0f7ff;
-        }
-
-        .screenshot-placeholder p {
-            color: #6c757d;
-            margin: 5px 0;
-        }
-
-        .screenshot-placeholder .title {
-            font-style: italic;
-            font-weight: 600;
-        }
-
-        .screenshot-placeholder .description {
-            font-size: 0.9rem;
-        }
-
-        .image-placeholder {
+        .img-container img {
             width: 100%;
             max-width: 800px;
-            height: 400px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border: 2px dashed #dee2e6;
             border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 20px auto;
-            transition: all 0.3s ease;
-        }
-
-        .image-placeholder:hover {
-            border-color: #4285F4;
-            background: linear-gradient(135deg, #f0f7ff 0%, #e3f2fd 100%);
-        }
-
-        .image-placeholder-content {
-            text-align: center;
-            color: #6c757d;
-        }
-
-        .image-placeholder-content h5 {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .image-placeholder-content p {
-            font-size: 0.9rem;
-            opacity: 0.8;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            height: auto;
         }
 
         @media (max-width: 768px) {
@@ -426,10 +369,6 @@
             
             .header h1 {
                 font-size: 2.5rem;
-            }
-            
-            .header .logo {
-                width: 250px;
             }
             
             .process-flow {
@@ -445,105 +384,95 @@
 <body>
     <div class="container">
         <div class="header">
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMzAwIDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBmaWxsPSJ3aGl0ZSI+CjxjaXJjbGUgY3g9IjQwIiBjeT0iNDAiIHI9IjMwIi8+CjxyZWN0IHg9IjI4IiB5PSIyOCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjQiLz4KPHJlY3QgeD0iMjgiIHk9IjM4IiB3aWR0aD0iMjQiIGhlaWdodD0iNCIvPgo8cmVjdCB4PSIyOCIgeT0iNDgiIHdpZHRoPSIyNCIgaGVpZ2h0PSI0Ii8+Cjx0ZXh0IHg9IjkwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkludGVyIiBmb250LXNpemU9IjM2IiBmb250LXdlaWdodD0iNzAwIj50YXN0ZXdpc2U8L3RleHQ+CjwvZz4KPC9zdmc+Cg==" alt="Tastewise" class="logo" />
-            <h1>Tastewise</h1>
-            <p>The Leading Consumer Data & GenAI Platform for F&B Brands</p>
+            <h1>tastewise</h1>
+            <p>The leading consumer data & GenAI platform for food & beverage brands</p>
         </div>
 
         <div class="tabs">
-            <button class="tab active" onclick="showTab(0)">Industry + Why Tastewise</button>
+            <button class="tab active" onclick="showTab(0)">Industry & Value Proposition</button>
             <button class="tab" onclick="showTab(1)">Bragg Use Case</button>
             <button class="tab" onclick="showTab(2)">Evaluation Process</button>
-            <button class="tab" onclick="showTab(3)">30-60-90 Day Plan</button>
+            <button class="tab" onclick="showTab(3)">90-Day Implementation</button>
         </div>
 
-        <!-- Tab 1: Industry + Why Tastewise -->
+        <!-- Tab 1: Industry & Value Proposition -->
         <div class="tab-content active">
             <div class="story-step">
-                <h3>The Unstoppable Food & Beverage Market</h3>
-                <p>Consumer demand for food and beverages remains constant, driving unprecedented market growth.</p>
+                <h3>The $9.45 trillion food & beverage market continues its relentless growth</h3>
+                <p>Consumer demand for food and beverages remains constant across all economic cycles, driving unprecedented market expansion and creating massive opportunities for innovative brands.</p>
                 <div class="stats-box">
-                    <h4>$9.45 Trillion</h4>
-                    <p>Market volume in 2025 | CAGR 6.34% (2025-2030)</p>
-                    <small>Source: Statista - Production, processing, distribution, marketing and consumption</small>
+                    <h4>$9.45 trillion</h4>
+                    <p>Global market volume in 2025 | 6.34% CAGR (2025-2030)</p>
+                    <small>Source: Statista — Production, processing, distribution, marketing and consumption</small>
                 </div>
             </div>
 
             <div class="story-step">
-                <h3>Consumer Preferences: Accelerating & Diversifying</h3>
-                <p>Rising consumer expectations for product variety force brands to compete aggressively for market share, creating operational complexity.</p>
+                <h3>The challenge: accelerating consumer preferences meet operational complexity</h3>
+                <p>Rising consumer expectations for product variety and personalization force brands to compete aggressively for market share. This creates significant operational complexity as traditional development processes struggle to keep pace with market demands.</p>
                 
-                <div class="image-placeholder">
-                    <div class="image-placeholder-content">
-                        <h5>Traditional Food Marketing Model</h5>
-                        <p>Lengthy consumer research → Focus groups → Product development → Market testing → Launch</p>
-                    </div>
+                <div class="img-container">
+                    <img src="img1.png" alt="Traditional food marketing workflow showing lengthy, disconnected processes">
                 </div>
                 
-                <p style="margin-top: 15px; color: #dc3545; font-weight: 600;"><strong>This traditional model is very high friction with low efficiency.</strong></p>
+                <p style="margin-top: 15px; color: #dc3545; font-weight: 600;"><strong>This traditional approach creates high friction with low efficiency—a recipe for lost opportunities.</strong></p>
             </div>
 
             <div class="story-step">
-                <h3>Impact: Lengthy, Costly and Not Precise</h3>
-                <p>Traditional product development and marketing validation requires extensive time, resources, and multiple vendor relationships, creating operational inefficiencies.</p>
+                <h3>The cost: lengthy development cycles drain resources and delay launches</h3>
+                <p>Traditional product development and marketing validation demands extensive time, substantial financial investment, and complex vendor relationships—all while market opportunities slip away.</p>
                 
-                <div class="image-placeholder">
-                    <div class="image-placeholder-content">
-                        <h5>Cost Breakdown Analysis</h5>
-                        <p>Market Research: $150K+ | Focus Groups: $75K+ | Development: $500K+ | Testing: $200K+</p>
-                    </div>
+                <div class="img-container">
+                    <img src="img2.png" alt="Cost breakdown showing expensive, time-consuming traditional research methods">
                 </div>
             </div>
 
             <div class="story-step">
-                <h3>Why Tastewise Was Born</h3>
+                <h3>The solution: tastewise transforms how brands innovate</h3>
                 
-                <div class="image-placeholder">
-                    <div class="image-placeholder-content">
-                        <h5>Consumer Data Platform with GenAI Workflow</h5>
-                        <p>Real-time data → AI insights → Instant validation → Optimized launch</p>
-                    </div>
+                <div class="img-container">
+                    <img src="img3.png" alt="tastewise platform overview showing streamlined, data-driven workflow">
                 </div>
                 
-                <p>Tastewise is the <span class="highlight">first and only platform</span> enabling CPG brands to predict product development and marketing success with precision <strong>before launch</strong>.</p>
+                <p>tastewise is the <span class="highlight">first and only platform</span> that enables consumer packaged goods brands to predict product development and marketing success with precision—before significant investment.</p>
                 
                 <div class="stats-box" style="margin: 25px 0;">
-                    <h4>6 Billion+</h4>
-                    <p>Data Points Powering Our GenAI Platform</p>
+                    <h4>6+ billion</h4>
+                    <p>Real-time data points powering our GenAI insights</p>
                 </div>
 
-                <img src="img4.png" 
-                     alt="Tastewise Platform Interface" 
-                     style="width: 100%; max-width: 800px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 20px auto; display: block;">
+                <div class="img-container">
+                    <img src="img4.png" alt="tastewise platform interface showing real-time consumer insights and AI recommendations">
+                </div>
 
-                <p>Our comprehensive GenAI platform delivers:</p>
+                <p>Our comprehensive GenAI platform delivers end-to-end solutions:</p>
                 <div class="process-flow">
                     <div class="process-step">
-                        <h4>Consumer Health Insights</h4>
-                        <p>Real-time trend analysis</p>
+                        <h4>Consumer health insights</h4>
+                        <p>Real-time trend analysis and predictive intelligence</p>
                     </div>
                     <div class="process-step">
-                        <h4>Flavor Recommendations</h4>
-                        <p>Data-driven predictions</p>
+                        <h4>Flavor recommendations</h4>
+                        <p>Data-driven predictions with market validation</p>
                     </div>
                     <div class="process-step">
-                        <h4>Content Generation</h4>
-                        <p>AI-powered assets</p>
+                        <h4>Content generation</h4>
+                        <p>AI-powered marketing assets and messaging</p>
                     </div>
                     <div class="process-step">
-                        <h4>Marketing Strategy & Launch</h4>
-                        <p>Go-to-market optimization</p>
+                        <h4>Marketing strategy</h4>
+                        <p>Go-to-market optimization and launch planning</p>
                     </div>
                     <div class="process-step">
-                        <h4>Sales Intelligence</h4>
-                        <p>Performance analytics</p>
+                        <h4>Sales intelligence</h4>
+                        <p>Performance analytics and market feedback</p>
                     </div>
                 </div>
             </div>
 
             <div class="story-step">
-                <h3>Trusted by Industry Leaders</h3>
-                <p>Leading CPG brands rely on Tastewise for competitive advantage:</p>
+                <h3>Trusted by industry leaders driving billions in revenue</h3>
+                <p>Leading consumer packaged goods brands rely on tastewise to maintain competitive advantage and accelerate growth:</p>
                 <div class="client-logos">
                     <div class="client-logo">PepsiCo</div>
                     <div class="client-logo">Campbell's</div>
@@ -556,305 +485,307 @@
                     <div class="client-logo">Waitrose</div>
                     <div class="client-logo">Kroger</div>
                 </div>
-                <a href="#" class="cta-button" onclick="showTab(1)">See How It Works →</a>
+                <a href="#" class="cta-button" onclick="showTab(1)">See tastewise in action →</a>
             </div>
         </div>
 
         <!-- Tab 2: Bragg Use Case -->
         <div class="tab-content">
             <div class="story-step">
-                <h3>Bragg's Challenge</h3>
-                <p><strong>Goal:</strong> Extend their ACV refresher flavors, but they need insights on consumer health needs and recommended flavors to inform product development and marketing.</p>
+                <h3>Bragg's innovation challenge</h3>
+                <p><strong>Objective:</strong> Expand their successful ACV refresher product line with new flavors that resonate with health-conscious consumers, but traditional research would take months and cost hundreds of thousands of dollars.</p>
                 
                 <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 25px; border-radius: 10px; margin: 20px 0;">
-                    <h4 style="color: #1976D2; margin-bottom: 15px;">Starting Point: Existing Data Analysis</h4>
-                    <p style="margin-bottom: 10px;"><strong>Category:</strong> ACV Refreshers</p>
-                    <p style="margin-bottom: 10px;"><strong>Target Audience:</strong> Health-conscious consumers aged 25-45</p>
-                    <p style="margin-bottom: 10px;"><strong>Cross-Product Opportunities:</strong> Supplements, protein products, wellness drinks</p>
-                    <p><strong>Market Position:</strong> Premium functional beverages space</p>
+                    <h4 style="color: #1976D2; margin-bottom: 15px;">Strategic context</h4>
+                    <p style="margin-bottom: 10px;"><strong>Product category:</strong> Apple cider vinegar refreshers</p>
+                    <p style="margin-bottom: 10px;"><strong>Target demographic:</strong> Health-conscious consumers aged 25-45</p>
+                    <p style="margin-bottom: 10px;"><strong>Cross-selling opportunities:</strong> Supplements, protein products, wellness beverages</p>
+                    <p><strong>Market positioning:</strong> Premium functional beverages with proven health benefits</p>
                 </div>
             </div>
 
             <div class="story-step">
-                <h3>4 Key Areas Tastewise Helps CPG Brands</h3>
+                <h3>tastewise covers the innovation lifecycle where traditional methods fall short</h3>
                 <div class="process-flow">
                     <div class="process-step">
-                        <h4>Pre-Development</h4>
-                        <p>Market intelligence → Concept development → Consumer validation</p>
-                        <div style="margin-top: 10px; color: #4285F4; font-weight: 600;">✅ Tastewise</div>
+                        <h4>Pre-development intelligence</h4>
+                        <p>Market analysis → Concept validation → Consumer insights</p>
+                        <div style="margin-top: 10px; color: #4285F4; font-weight: 600;">✅ tastewise advantage</div>
                     </div>
                     <div class="process-step">
-                        <h4>Development & Testing</h4>
-                        <p>Prototype development → Sensory testing → Iterative refinement</p>
-                        <div style="margin-top: 10px; color: #28a745; font-weight: 600;">🏢 Bragg</div>
+                        <h4>Development & testing</h4>
+                        <p>Prototype creation → Sensory evaluation → Recipe refinement</p>
+                        <div style="margin-top: 10px; color: #28a745; font-weight: 600;">🏢 Bragg expertise</div>
                     </div>
                     <div class="process-step">
-                        <h4>Pre-Launch</h4>
-                        <p>Final validation → Content Creation + Marketing strategy</p>
-                        <div style="margin-top: 10px; color: #4285F4; font-weight: 600;">✅ Tastewise</div>
+                        <h4>Pre-launch validation</h4>
+                        <p>Market testing → Content creation → Campaign strategy</p>
+                        <div style="margin-top: 10px; color: #4285F4; font-weight: 600;">✅ tastewise advantage</div>
                     </div>
                     <div class="process-step">
-                        <h4>Launch & Scale</h4>
-                        <p>Soft launch → Performance monitoring → Optimization → Scale</p>
-                        <div style="margin-top: 10px; color: #4285F4; font-weight: 600;">✅ Tastewise</div>
+                        <h4>Launch & optimization</h4>
+                        <p>Market entry → Performance tracking → Strategic scaling</p>
+                        <div style="margin-top: 10px; color: #4285F4; font-weight: 600;">✅ tastewise advantage</div>
                     </div>
                 </div>
             </div>
 
             <div class="story-step">
-                <h3>Consumer Health Insights Discovery</h3>
-                <p>Based on our platform data analysis, these are the highest trending consumer health insights across the US:</p>
+                <h3>Consumer health insights reveal clear market opportunities</h3>
+                <p>Our platform analysis identifies the fastest-growing consumer health trends across the United States, providing data-driven direction for product development:</p>
                 <div class="insights-grid">
-                    <div class="insight-tag">Gut Health ↗️ 45% YoY</div>
-                    <div class="insight-tag">Immune Support ↗️ 38%</div>
-                    <div class="insight-tag">Healthy Refreshers ↗️ 34%</div>
-                    <div class="insight-tag">Spicy Flavors ↗️ 32%</div>
-                    <div class="insight-tag">High Protein ↗️ 29%</div>
-                    <div class="insight-tag">Natural Ingredients ↗️ 41%</div>
-                    <div class="insight-tag">Low Sugar ↗️ 27%</div>
-                    <div class="insight-tag">Weight Management ↗️ 23%</div>
-                    <div class="insight-tag">Anti-Inflammatory ↗️ 36%</div>
-                    <div class="insight-tag">Blood Sugar Support ↗️ 31%</div>
+                    <div class="insight-tag">Gut health ↗️ 45% YoY</div>
+                    <div class="insight-tag">Immune support ↗️ 38%</div>
+                    <div class="insight-tag">Functional refreshers ↗️ 34%</div>
+                    <div class="insight-tag">Anti-inflammatory ↗️ 36%</div>
+                    <div class="insight-tag">Natural ingredients ↗️ 41%</div>
+                    <div class="insight-tag">Blood sugar management ↗️ 31%</div>
+                    <div class="insight-tag">Spicy flavor profiles ↗️ 32%</div>
+                    <div class="insight-tag">High protein content ↗️ 29%</div>
+                    <div class="insight-tag">Low sugar formulations ↗️ 27%</div>
+                    <div class="insight-tag">Weight management ↗️ 23%</div>
                 </div>
                 
                 <div style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #ffc107;">
-                    <strong>Key Finding:</strong> Gut health and anti-inflammatory benefits show the strongest growth trajectory, aligning perfectly with ACV's natural properties.
+                    <strong>Strategic insight:</strong> Gut health and anti-inflammatory benefits demonstrate the strongest growth trajectory, perfectly aligning with apple cider vinegar's natural properties and consumer perceptions.
                 </div>
             </div>
 
             <div class="story-step">
-                <h3>AI-Recommended Flavors</h3>
-                <p>Based on comprehensive data validation and consumer analysis, Tastewise recommends these 5 high-potential flavors:</p>
+                <h3>AI-powered flavor recommendations backed by market data</h3>
+                <p>Based on comprehensive consumer analysis and trend validation, tastewise recommends five high-potential flavor profiles with proven market appeal:</p>
                 <div class="flavor-recommendations">
-                    <h4>Top 5 Data-Driven Flavor Recommendations</h4>
+                    <h4>Data-driven flavor innovation roadmap</h4>
                     <div class="flavors-list">
-                        <div class="flavor-item">🌿 Ginger Turmeric</div>
-                        <div class="flavor-item">🍇 Pomegranate Mint</div>
-                        <div class="flavor-item">🫐 Elderberry Lemon</div>
-                        <div class="flavor-item">🌺 Hibiscus Lime</div>
-                        <div class="flavor-item">🍯 Green Tea Honey</div>
+                        <div class="flavor-item">🌿 Ginger turmeric</div>
+                        <div class="flavor-item">🍇 Pomegranate mint</div>
+                        <div class="flavor-item">🫐 Elderberry lemon</div>
+                        <div class="flavor-item">🌺 Hibiscus lime</div>
+                        <div class="flavor-item">🍯 Green tea honey</div>
                     </div>
                     
                     <div style="background: rgba(255,255,255,0.9); padding: 20px; border-radius: 10px; margin-top: 20px;">
-                        <h5 style="color: #333; margin-bottom: 15px;">Cross-Product Application Potential:</h5>
+                        <h5 style="color: #333; margin-bottom: 15px;">Cross-product application opportunities:</h5>
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
-                            <div style="background: #4285F4; color: white; padding: 8px 15px; border-radius: 15px; text-align: center; font-size: 0.9rem;">Supplements</div>
-                            <div style="background: #4285F4; color: white; padding: 8px 15px; border-radius: 15px; text-align: center; font-size: 0.9rem;">Protein Products</div>
-                            <div style="background: #4285F4; color: white; padding: 8px 15px; border-radius: 15px; text-align: center; font-size: 0.9rem;">Mocktails</div>
-                            <div style="background: #4285F4; color: white; padding: 8px 15px; border-radius: 15px; text-align: center; font-size: 0.9rem;">Wellness Shots</div>
-                            <div style="background: #4285F4; color: white; padding: 8px 15px; border-radius: 15px; text-align: center; font-size: 0.9rem;">Foot Soaks</div>
+                            <div style="background: #4285F4; color: white; padding: 8px 15px; border-radius: 15px; text-align: center; font-size: 0.9rem;">Supplement lines</div>
+                            <div style="background: #4285F4; color: white; padding: 8px 15px; border-radius: 15px; text-align: center; font-size: 0.9rem;">Protein products</div>
+                            <div style="background: #4285F4; color: white; padding: 8px 15px; border-radius: 15px; text-align: center; font-size: 0.9rem;">Functional mocktails</div>
+                            <div style="background: #4285F4; color: white; padding: 8px 15px; border-radius: 15px; text-align: center; font-size: 0.9rem;">Wellness shots</div>
+                            <div style="background: #4285F4; color: white; padding: 8px 15px; border-radius: 15px; text-align: center; font-size: 0.9rem;">Spa products</div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="story-step">
-                <h3>Content Visualization & Pre-Launch Validation</h3>
-                <p>Tastewise creates compelling content concepts to visualize your new flavors, then validates them through targeted campaigns:</p>
+                <h3>Proven ROI through rapid market validation</h3>
+                <p>tastewise transforms product concepts into market-ready campaigns, enabling brands to validate demand before major investment commitments:</p>
                 
                 <div style="background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%); padding: 25px; border-radius: 10px; margin: 20px 0;">
-                    <h4 style="color: #2e7d32; margin-bottom: 15px;">🏆 Success Story: Crunch Pak</h4>
-                    <p style="color: #333; margin-bottom: 10px;"><strong>Challenge:</strong> Similar profile company (<500 employees, <$200M revenue) needed new product innovation</p>
-                    <p style="color: #333; margin-bottom: 10px;"><strong>Solution:</strong> Tastewise identified untapped flavor opportunities and market positioning</p>
-                    <p style="color: #2e7d32; font-weight: 600; font-size: 1.1rem;"><strong>Result: $10M in new sales within weeks</strong></p>
+                    <h4 style="color: #2e7d32; margin-bottom: 15px;">🏆 Comparable success: Crunch Pak</h4>
+                    <p style="color: #333; margin-bottom: 10px;"><strong>Challenge:</strong> Mid-size company (under 500 employees, sub-$200M revenue) needed rapid product innovation to compete with larger players</p>
+                    <p style="color: #333; margin-bottom: 10px;"><strong>tastewise solution:</strong> Identified untapped flavor opportunities and optimal market positioning within weeks</p>
+                    <p style="color: #2e7d32; font-weight: 600; font-size: 1.1rem;"><strong>Measurable outcome: $10M in incremental sales within first quarter</strong></p>
                 </div>
                 
                 <div class="stats-box">
-                    <h4>Minutes vs. Months</h4>
-                    <p>Complete validation process in minutes, not months of traditional research</p>
+                    <h4>Minutes vs. months</h4>
+                    <p>Complete market validation in minutes, not months of traditional research cycles</p>
                 </div>
                 
-                <a href="#" class="cta-button" onclick="showTab(2)">Ready to Evaluate? →</a>
+                <a href="#" class="cta-button" onclick="showTab(2)">Explore our evaluation process →</a>
             </div>
         </div>
 
         <!-- Tab 3: Evaluation Process -->
         <div class="tab-content">
             <div class="story-step">
-                <h3>Your Journey to Success</h3>
-                <p>Our proven 8-step evaluation and onboarding process is designed to minimize risk and maximize results. Here's exactly what to expect:</p>
+                <h3>Your strategic evaluation roadmap</h3>
+                <p>Our proven eight-step evaluation and onboarding process minimizes risk while maximizing speed to value. Here's exactly what you can expect:</p>
                 
                 <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 25px; border-radius: 10px; margin: 20px 0;">
-                    <h4 style="color: #1976D2; margin-bottom: 15px;">Timeline Overview</h4>
-                    <p style="margin-bottom: 10px;"><strong>Phase 1:</strong> Discovery & Demo (Week 1)</p>
-                    <p style="margin-bottom: 10px;"><strong>Phase 2:</strong> Proposal & Approval (Week 2-3)</p>
-                    <p><strong>Phase 3:</strong> Contract & Onboarding (Week 4)</p>
+                    <h4 style="color: #1976D2; margin-bottom: 15px;">Timeline overview</h4>
+                    <p style="margin-bottom: 10px;"><strong>Phase 1:</strong> Discovery & demonstration (Week 1)</p>
+                    <p style="margin-bottom: 10px;"><strong>Phase 2:</strong> Proposal development & approval (Weeks 2-3)</p>
+                    <p><strong>Phase 3:</strong> Contract execution & platform onboarding (Week 4)</p>
                 </div>
             </div>
 
             <div class="timeline">
                 <div class="timeline-item" data-step="1">
-                    <h4>Discovery Call ✅ Today</h4>
+                    <h4>Discovery call ✅ Today</h4>
                     <p><strong>Duration:</strong> 45-60 minutes<br>
-                    <strong>Participants:</strong> You + Tastewise Solutions Team<br>
-                    <strong>Outcome:</strong> Clear understanding of your challenges, goals, and potential ROI. We'll identify key use cases and demonstrate initial value.</p>
+                    <strong>Participants:</strong> Your team + tastewise solutions specialists<br>
+                    <strong>Deliverable:</strong> Clear understanding of your strategic challenges, growth objectives, and potential ROI. We identify key use cases and demonstrate immediate value opportunities.</p>
                 </div>
 
                 <div class="timeline-item" data-step="2">
-                    <h4>Custom Use Case Demo</h4>
+                    <h4>Custom use case demonstration</h4>
                     <p><strong>Duration:</strong> 60-90 minutes<br>
-                    <strong>Participants:</strong> CMO, Head of Product Dev + Tastewise Team<br>
-                    <strong>Outcome:</strong> Live demonstration using your specific category, brand challenges, and competitive landscape. Real data, real insights.</p>
+                    <strong>Participants:</strong> CMO, head of product development + tastewise team<br>
+                    <strong>Deliverable:</strong> Live platform demonstration using your specific product categories, brand challenges, and competitive landscape. Real data, actionable insights.</p>
                 </div>
 
                 <div class="timeline-item" data-step="3">
-                    <h4>Strategic Alignment Meeting</h4>
-                    <p><strong>Duration:</strong> 30-45 minutes (if needed)<br>
-                    <strong>Participants:</strong> Key stakeholders<br>
-                    <strong>Outcome:</strong> Align on product roadmap priorities and additional use cases. Define success metrics and partnership scope.</p>
+                    <h4>Strategic alignment session</h4>
+                    <p><strong>Duration:</strong> 30-45 minutes (as needed)<br>
+                    <strong>Participants:</strong> Key stakeholders across functions<br>
+                    <strong>Deliverable:</strong> Alignment on product roadmap priorities and additional use cases. Definition of success metrics and partnership scope.</p>
                 </div>
 
                 <div class="timeline-item" data-step="4">
-                    <h4>Executive Proposal Walkthrough</h4>
+                    <h4>Executive proposal presentation</h4>
                     <p><strong>Duration:</strong> 45-60 minutes<br>
-                    <strong>Participants:</strong> Executive Sponsor (CMO) + C-Suite as needed<br>
-                    <strong>Outcome:</strong> Detailed ROI projection, implementation timeline, and investment proposal presentation.</p>
+                    <strong>Participants:</strong> Executive sponsor (CMO) + C-suite as appropriate<br>
+                    <strong>Deliverable:</strong> Comprehensive ROI projections, implementation timeline, and detailed investment proposal.</p>
                 </div>
 
                 <div class="timeline-item" data-step="5">
-                    <h4>Budget Approval & Green Light</h4>
-                    <p><strong>Duration:</strong> Internal process<br>
-                    <strong>Participants:</strong> Your executive team<br>
-                    <strong>Outcome:</strong> Verbal confirmation of budget approval and timeline commitment.</p>
+                    <h4>Budget approval & commitment</h4>
+                    <p><strong>Duration:</strong> Internal decision process<br>
+                    <strong>Participants:</strong> Your executive leadership team<br>
+                    <strong>Deliverable:</strong> Verbal confirmation of budget approval and implementation timeline commitment.</p>
                 </div>
 
                 <div class="timeline-item" data-step="6">
-                    <h4>Contract Delivery</h4>
+                    <h4>Contract delivery</h4>
                     <p><strong>Duration:</strong> 24-48 hours<br>
-                    <strong>Participants:</strong> Tastewise Legal + Your Procurement<br>
-                    <strong>Outcome:</strong> Official agreement with terms based on approved proposal.</p>
+                    <strong>Participants:</strong> tastewise legal + your procurement team<br>
+                    <strong>Deliverable:</strong> Formal agreement reflecting approved proposal terms and conditions.</p>
                 </div>
 
                 <div class="timeline-item" data-step="7">
-                    <h4>Legal Review & Execution</h4>
+                    <h4>Legal review & execution</h4>
                     <p><strong>Duration:</strong> 3-7 business days<br>
-                    <strong>Participants:</strong> Legal teams from both sides<br>
-                    <strong>Outcome:</strong> Contract modifications (if needed) and final execution of agreement.</p>
+                    <strong>Participants:</strong> Legal teams from both organizations<br>
+                    <strong>Deliverable:</strong> Contract modifications (if required) and final execution of partnership agreement.</p>
                 </div>
 
                 <div class="timeline-item" data-step="8">
-                    <h4>Onboarding & Launch</h4>
-                    <p><strong>Duration:</strong> Week 1 of partnership<br>
-                    <strong>Participants:</strong> Your team + Tastewise Success Team<br>
-                    <strong>Outcome:</strong> Platform access, team training, first use case execution, and success metrics baseline.</p>
+                    <h4>Platform onboarding & launch</h4>
+                    <p><strong>Duration:</strong> First week of partnership<br>
+                    <strong>Participants:</strong> Your cross-functional team + tastewise success specialists<br>
+                    <strong>Deliverable:</strong> Complete platform access, team training, first use case execution, and success metrics baseline establishment.</p>
                 </div>
             </div>
 
             <div class="story-step">
-                <h3>Timeline & Investment Expectations</h3>
+                <h3>Speed to value: weeks, not quarters</h3>
                 <div class="stats-box">
-                    <h4>2-4 Weeks</h4>
-                    <p>From Discovery to Platform Launch</p>
+                    <h4>2-4 weeks</h4>
+                    <p>From initial discovery to full platform implementation</p>
                 </div>
                 
-                <p>Our streamlined process ensures you move from evaluation to value creation quickly, with clear milestones and deliverables at each step. No lengthy pilots or proof-of-concepts – just results.</p>
+                <p>Our streamlined evaluation process ensures rapid progression from assessment to value creation, with clear milestones and deliverables at every step. No lengthy pilots or proof-of-concept phases—just measurable results.</p>
                 
-                <a href="#" class="cta-button" onclick="showTab(3)">See Implementation Plan →</a>
+                <a href="#" class="cta-button" onclick="showTab(3)">View implementation strategy →</a>
             </div>
         </div>
 
-        <!-- Tab 4: 30-60-90 Day Plan -->
+        <!-- Tab 4: 90-Day Implementation -->
         <div class="tab-content">
             <div class="story-step">
-                <h3>Your 90-Day Success Roadmap</h3>
-                <p>A structured approach to maximize value and ensure rapid ROI from your Tastewise partnership. Each phase builds on the previous to compound your success.</p>
+                <h3>Your 90-day value acceleration roadmap</h3>
+            <div class="story-step">
+                <h3>Your 90-day value acceleration roadmap</h3>
+                <p>A systematic approach to maximize platform value and ensure rapid ROI from your tastewise partnership. Each phase builds strategically on the previous to compound your competitive advantage.</p>
             </div>
 
             <div class="month-plan">
                 <div class="month-card">
-                    <h3>Month 1</h3>
-                    <h4>CLARITY</h4>
+                    <h3>Days 1-30</h3>
+                    <h4>FOUNDATION</h4>
                     <ul>
-                        <li>Complete platform onboarding and team training</li>
-                        <li>Master core product features and use cases</li>
-                        <li>Conduct comprehensive market intelligence analysis</li>
-                        <li>Evaluate current product portfolio performance</li>
-                        <li>Audit and optimize existing brand positioning</li>
-                        <li>Map detailed product development workflow</li>
-                        <li>Establish KPIs, success metrics, and reporting cadence</li>
-                        <li>Complete team certifications and competency validation</li>
+                        <li>Complete comprehensive platform onboarding and team training</li>
+                        <li>Master core platform capabilities and strategic use cases</li>
+                        <li>Conduct thorough market intelligence analysis for your categories</li>
+                        <li>Evaluate current product portfolio performance against market trends</li>
+                        <li>Audit and optimize existing brand positioning and messaging</li>
+                        <li>Map detailed product development workflows and decision points</li>
+                        <li>Establish KPIs, success metrics, and reporting protocols</li>
+                        <li>Complete team certifications and demonstrate platform competency</li>
                     </ul>
                 </div>
 
                 <div class="month-card">
-                    <h3>Month 2</h3>
-                    <h4>MOTION</h4>
+                    <h3>Days 31-60</h3>
+                    <h4>ACCELERATION</h4>
                     <ul>
-                        <li>Launch comprehensive flavor discovery initiatives</li>
-                        <li>Execute "all hands on deck" trend identification</li>
-                        <li>Conduct joint strategy sessions with Tastewise team</li>
-                        <li>Generate and validate new product concepts</li>
-                        <li>Implement weekly performance reviews and optimization</li>
-                        <li>Refine messaging and positioning based on data insights</li>
-                        <li>Establish robust feedback loops and rapid iteration cycles</li>
-                        <li>Scale successful strategies and pause underperforming concepts</li>
+                        <li>Launch comprehensive flavor discovery and trend identification initiatives</li>
+                        <li>Execute cross-functional innovation sprints with real-time market data</li>
+                        <li>Conduct weekly strategic sessions with tastewise specialists</li>
+                        <li>Generate and validate multiple new product concepts simultaneously</li>
+                        <li>Implement rapid iteration cycles with weekly performance reviews</li>
+                        <li>Refine messaging and positioning based on continuous data insights</li>
+                        <li>Establish robust feedback loops between teams and market response</li>
+                        <li>Scale successful strategies while eliminating underperforming approaches</li>
                     </ul>
                 </div>
 
                 <div class="month-card">
-                    <h3>Month 3</h3>
-                    <h4>SCALE</h4>
+                    <h3>Days 61-90</h3>
+                    <h4>OPTIMIZATION</h4>
                     <ul>
-                        <li>Scale proven successful strategies across all product lines</li>
-                        <li>Expand platform usage to additional use cases and teams</li>
-                        <li>Implement advanced features and automation workflows</li>
-                        <li>Drive cross-functional integration (R&D, Marketing, Sales)</li>
-                        <li>Conduct comprehensive ROI measurement and reporting</li>
-                        <li>Develop long-term strategic roadmap and expansion plan</li>
+                        <li>Scale proven strategies across entire product portfolio</li>
+                        <li>Expand platform utilization to additional teams and use cases</li>
+                        <li>Implement advanced automation workflows and predictive analytics</li>
+                        <li>Drive seamless integration across R&D, marketing, and sales functions</li>
+                        <li>Conduct comprehensive ROI measurement and impact analysis</li>
+                        <li>Develop long-term strategic roadmap and expansion opportunities</li>
                         <li>Establish center of excellence for ongoing platform optimization</li>
-                        <li>Plan for advanced integrations and custom solutions</li>
+                        <li>Plan advanced integrations and custom solution development</li>
                     </ul>
                 </div>
             </div>
 
             <div class="story-step">
-                <h3>Success Metrics & KPIs by Month</h3>
+                <h3>Success metrics and performance indicators by phase</h3>
                 <div class="process-flow">
                     <div class="process-step">
-                        <h4>Month 1 KPIs</h4>
-                        <p><strong>Learning & Foundation:</strong><br>
+                        <h4>Days 1-30 KPIs</h4>
+                        <p><strong>Foundation metrics:</strong><br>
                         • Platform adoption rate: >90%<br>
-                        • User certification completion: 100%<br>
-                        • Market intelligence insights: +25%<br>
-                        • Process optimization index: Baseline established</p>
+                        • Team certification completion: 100%<br>
+                        • Market intelligence utilization: +25%<br>
+                        • Process optimization baseline: Established</p>
                     </div>
                     <div class="process-step">
-                        <h4>Month 2 KPIs</h4>
-                        <p><strong>Execution & Growth:</strong><br>
-                        • New concept generation: +40%<br>
-                        • Qualified product opportunities: +60%<br>
+                        <h4>Days 31-60 KPIs</h4>
+                        <p><strong>Acceleration metrics:</strong><br>
+                        • New concept generation rate: +40%<br>
+                        • Validated product opportunities: +60%<br>
                         • Development cycle velocity: +30%<br>
-                        • Joint session success rate: >75%</p>
+                        • Strategic session effectiveness: >75%</p>
                     </div>
                     <div class="process-step">
-                        <h4>Month 3 KPIs</h4>
-                        <p><strong>Scale & ROI:</strong><br>
-                        • Revenue attribution: Measurable impact<br>
-                        • Overall ROI achievement: 3-5x target<br>
+                        <h4>Days 61-90 KPIs</h4>
+                        <p><strong>Optimization metrics:</strong><br>
+                        • Revenue impact attribution: Measurable<br>
+                        • Overall ROI achievement: 3-5x investment<br>
                         • Platform utilization depth: >80%<br>
-                        • Expansion opportunities identified: 3-5 new use cases</p>
+                        • Expansion opportunities: 3-5 new applications</p>
                     </div>
                 </div>
             </div>
 
             <div class="story-step">
-                <h3>Expected Business Outcomes</h3>
+                <h3>Measurable business impact you can expect</h3>
                 <div class="stats-box">
-                    <h4>3-5x Faster</h4>
-                    <p>Product Development Cycle Time</p>
+                    <h4>3-5x faster</h4>
+                    <p>Product development and validation cycle times</p>
                 </div>
                 <div class="stats-box">
-                    <h4>40-60% Reduction</h4>
-                    <p>Market Research & Validation Costs</p>
+                    <h4>40-60% reduction</h4>
+                    <p>Market research and validation costs</p>
                 </div>
                 <div class="stats-box">
-                    <h4>2-3x Improvement</h4>
-                    <p>Campaign Performance & ROI</p>
+                    <h4>2-3x improvement</h4>
+                    <p>Marketing campaign performance and ROI</p>
                 </div>
                 
                 <p style="text-align: center; margin-top: 30px;">
-                    <a href="#" class="cta-button" onclick="showTab(0)">Start Your Journey</a>
-                    <a href="#" class="cta-button" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%);" onclick="showTab(2)">Schedule Evaluation Call</a>
+                    <a href="#" class="cta-button" onclick="showTab(0)">Return to overview</a>
+                    <a href="#" class="cta-button" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%);" onclick="showTab(2)">Schedule evaluation call</a>
                 </p>
             </div>
         </div>
