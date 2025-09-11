@@ -355,70 +355,6 @@
             font-weight: bold;
         }
 
-        .screenshot-placeholder {
-            background: #f8f9fa;
-            border: 2px dashed #dee2e6;
-            padding: 40px;
-            text-align: center;
-            margin: 20px 0;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .screenshot-placeholder:hover {
-            border-color: #4285F4;
-            background: #f0f7ff;
-        }
-
-        .screenshot-placeholder p {
-            color: #6c757d;
-            margin: 5px 0;
-        }
-
-        .screenshot-placeholder .title {
-            font-style: italic;
-            font-weight: 600;
-        }
-
-        .screenshot-placeholder .description {
-            font-size: 0.9rem;
-        }
-
-        .image-placeholder {
-            width: 100%;
-            max-width: 800px;
-            height: 400px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border: 2px dashed #dee2e6;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 20px auto;
-            transition: all 0.3s ease;
-        }
-
-        .image-placeholder:hover {
-            border-color: #4285F4;
-            background: linear-gradient(135deg, #f0f7ff 0%, #e3f2fd 100%);
-        }
-
-        .image-placeholder-content {
-            text-align: center;
-            color: #6c757d;
-        }
-
-        .image-placeholder-content h5 {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .image-placeholder-content p {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
         @media (max-width: 768px) {
             .tabs {
                 flex-direction: column;
@@ -473,12 +409,9 @@
                 <h3>Consumer Preferences: Accelerating & Diversifying</h3>
                 <p>Rising consumer expectations for product variety force brands to compete aggressively for market share, creating operational complexity.</p>
                 
-                <div class="image-placeholder">
-                    <div class="image-placeholder-content">
-                        <h5>Traditional Food Marketing Model</h5>
-                        <p>Lengthy consumer research → Focus groups → Product development → Market testing → Launch</p>
-                    </div>
-                </div>
+                <img src="img1.png" 
+                     alt="Traditional Food Marketing Model" 
+                     style="width: 100%; max-width: 800px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 20px auto; display: block;">
                 
                 <p style="margin-top: 15px; color: #dc3545; font-weight: 600;"><strong>This traditional model is very high friction with low efficiency.</strong></p>
             </div>
@@ -487,23 +420,17 @@
                 <h3>Impact: Lengthy, Costly and Not Precise</h3>
                 <p>Traditional product development and marketing validation requires extensive time, resources, and multiple vendor relationships, creating operational inefficiencies.</p>
                 
-                <div class="image-placeholder">
-                    <div class="image-placeholder-content">
-                        <h5>Cost Breakdown Analysis</h5>
-                        <p>Market Research: $150K+ | Focus Groups: $75K+ | Development: $500K+ | Testing: $200K+</p>
-                    </div>
-                </div>
+                <img src="img2.png" 
+                     alt="Cost Breakdown Analysis" 
+                     style="width: 100%; max-width: 800px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 20px auto; display: block;">
             </div>
 
             <div class="story-step">
                 <h3>Why Tastewise Was Born</h3>
                 
-                <div class="image-placeholder">
-                    <div class="image-placeholder-content">
-                        <h5>Consumer Data Platform with GenAI Workflow</h5>
-                        <p>Real-time data → AI insights → Instant validation → Optimized launch</p>
-                    </div>
-                </div>
+                <img src="img3.png" 
+                     alt="Consumer Data Platform with GenAI Workflow" 
+                     style="width: 100%; max-width: 800px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: 20px auto; display: block;">
                 
                 <p>Tastewise is the <span class="highlight">first and only platform</span> enabling CPG brands to predict product development and marketing success with precision <strong>before launch</strong>.</p>
                 
@@ -718,6 +645,8 @@
                     <strong>Outcome:</strong> Verbal confirmation of budget approval and timeline commitment.</p>
                 </div>
 
+                <div class="timeline-item" data-step="6">
+                    <h4>Contract Delivery</h4>
                 <div class="timeline-item" data-step="6">
                     <h4>Contract Delivery</h4>
                     <p><strong>Duration:</strong> 24-48 hours<br>
